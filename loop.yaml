@@ -1,0 +1,9 @@
+- hosts: host
+  become: true
+  tasks:
+   - name: Install Packages
+     package:
+      name: ['wget', 'nano', 'git', 'vim']
+      update_cache: yes
+      state: present
+
